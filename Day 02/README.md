@@ -31,7 +31,8 @@ $> docker start -i [nom du conteneur].
 ## Installation des paquets 
 
 Les paquets les plus importants pour ce serveur sont nginx, Openssh-server et tor, 
-Pour les installer, il faut utiliser apt comme suit : 
+Pour les installer, il faut utiliser apt comme suit :
+
 Pour Openssh-server 
 ```
 $> apt update
