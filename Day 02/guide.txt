@@ -131,8 +131,8 @@ Configuration du serveur
 
 Pour la configuration du serveur, nous devons comprendre ce que sont tor, nginx et ssh. 
 Pour commencer notre configuration, nous allons créer un utilisateur et le placer dans le groupe sudo : 
-$> adduser user user1 
-$> usermod -aG sudo user1 
+$> adduser user
+$> usermod -aG sudo user
 Ceci sera utile lorsque nous voudrons nous connecter via ssh à notre serveur. 
 Nous allons continuer à configurer ssh, pour nous connecter à notre serveur à partir du port 4242. 
 $> cd /etc/ssh 
