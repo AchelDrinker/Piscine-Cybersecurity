@@ -13,7 +13,7 @@ $> docker run -it -p 4242:4242 -p 80:80 --name [container name] [docker image]
 -it : Rend le conteneur interactif depuis le terminal.  
 -p : Exposer le port 4242 et 80, dans ce cas, à partir du conteneur en tant que port 4242 et 80, n'importe quel autre port fera l'affaire. 
 --name : Le nom du conteneur. 
-image : dans ce cas j'ai choisi debian (installa tion avec 'docker pull debian')
+image : dans ce cas j'ai choisi debian (installation avec 'docker pull debian')
 
 Pour sortir de ce processus, nous exécutons : 
 $> exit                      
