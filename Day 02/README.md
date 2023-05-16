@@ -9,17 +9,17 @@ Tout d'abord nous installerions docker ou nous le démarrerions, dans les macs d
 $> /sgoinfre/shared/42toolbox/init_docker.sh 
 Ou depuis un autre appareil, nous irons sur le bureau de Docker. 
 Une fois installé, nous pouvons démarrer notre serveur avec la commande suivante dans le terminal : 
-$> docker run -it -p 4242:4242 -p 80:80 --name [container name] [docker image] --name [container name] [docker image] [docker image] [docker image] [docker image] [docker image] [docker image] [docker image] [docker image 
+$> docker run -it -p 4242:4242 -p 80:80 --name [container name] [docker image]
 -it : Rend le conteneur interactif depuis le terminal.  
 -p : Exposer le port 4242 et 80, dans ce cas, à partir du conteneur en tant que port 4242 et 80, n'importe quel autre port fera l'affaire. 
 --name : Le nom du conteneur. 
-image : dans ce cas j'ai choisi debian mais cela peut être nginx ou une autre image, elle est cliquée directement depuis le hub Docker. 
+image : dans ce cas j'ai choisi debian (installa tion avec 'docker pull debian')
 Pour sortir de ce processus, nous exécutons : 
 $> exit                      
 Pour le redémarrer on exécute dans le terminal : 
 $> docker start -i [nom du conteneur]. 
 
-Installation des paquets 
+## Installation des paquets 
 
 Les paquets les plus importants pour ce serveur sont nginx, Openssh-server et tor, 
 Pour les installer, il faut utiliser apt comme suit : 
@@ -33,7 +33,7 @@ Il serait également utile d'installer sudo pour accéder à la racine depuis ss
 $> apt install sudo 
 $> apt install vim 
 
-Configuration du serveur
+## Configuration du serveur
 
 Pour la configuration du serveur, nous devons comprendre ce que sont tor, nginx et ssh. 
 Pour commencer notre configuration, nous allons créer un utilisateur et le placer dans le groupe sudo : 
@@ -72,7 +72,7 @@ $> vim torrc
 Ceci connectera notre service caché à travers le port 80 et sauvegardera les données dans /var/lib/tor/hidden_service/. 
 Nous terminons ainsi la configuration de notre serveur avec le service caché. 
 
-Démarrer notre serveur 
+## Démarrer notre serveur 
 
 Pour démarrer notre serveur, nous devons démarrer tor et obtenir le nom d'hôte qui se trouve dans /var/lib/tor/hidden_service/hostname. 
 Pour démarrer tor, il faut taper 
