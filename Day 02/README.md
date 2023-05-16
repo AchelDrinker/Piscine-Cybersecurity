@@ -79,7 +79,8 @@ Et pour démarrer ssh :
 $> service ssh start 
 ```
 Nous pouvons ainsi nous connecter en ssh à notre serveur sur le port 4242. 
-Une fois ssh configuré, nous allons aller sur nginx avec lequel nous allons héberger notre serveur web via http. 
+Une fois ssh configuré, nous allons aller sur nginx avec lequel nous allons héberger notre serveur web via http.
+
 Pour ce faire, nous allons d'abord aller dans nginx.conf : 
 ```
 $> cd /etc/nginx 
