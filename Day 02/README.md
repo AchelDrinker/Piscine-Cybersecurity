@@ -1,11 +1,15 @@
 # ft_onion
 
 Voici un guide rapide pour minifier votre ft_onion, avec les commandes essentielles pour faire fonctionner le serveur dans les plus brefs délais.
+
 Le projet est expliqué dans la section guide qui contient des informations sur tor et les services cachés, ssh et nginx. 
 
-Docker ou VirtualBox 
+## Docker ou VirtualBox 
+
 À mon goût, j'opterais pour Docker car il consomme moins de ressources et occupe moins d'espace,
+
 De plus, avec docker vous pouvez directement télécharger une image de nginx.
+
 Tout d'abord nous installons docker ou nous le démarrons, dans les macs de l'école 42 nous le démarrons depuis le terminal de la manière suivante : 
 ```
 $> /sgoinfre/shared/42toolbox/init_docker.sh 
