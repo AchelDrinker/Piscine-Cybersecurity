@@ -1,4 +1,4 @@
-#ft_onion
+# ft_onion
 
 Voici un guide rapide pour minifier votre ft_onion, avec les commandes essentielles pour faire fonctionner le serveur dans les plus brefs délais. Le projet est expliqué dans la section guide qui contient des informations sur tor et les services cachés, ssh et nginx. 
 
