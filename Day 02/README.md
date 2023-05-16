@@ -4,20 +4,20 @@ Voici un guide rapide pour minifier votre ft_onion, avec les commandes essentiel
 Le projet est expliqué dans la section guide qui contient des informations sur tor et les services cachés, ssh et nginx. 
 
 Docker ou VirtualBox 
-À mon goût, j'opterais pour Docker car il consomme moins de ressources et occupe moins d'espace, 
-De plus, avec docker vous pouvez directement télécharger une image de nginx. 
+À mon goût, j'opterais pour Docker car il consomme moins de ressources et occupe moins d'espace,
+De plus, avec docker vous pouvez directement télécharger une image de nginx.
 Tout d'abord nous installons docker ou nous le démarrons, dans les macs de l'école 42 nous le démarrons depuis le terminal de la manière suivante : 
 ```
 $> /sgoinfre/shared/42toolbox/init_docker.sh 
 ```
-Ou depuis un autre appareil, nous allons sur le bureau de Docker. 
+Ou depuis un autre appareil, nous allons sur le bureau de Docker.
 Une fois installé, nous pouvons démarrer notre serveur avec la commande suivante dans le terminal :
 ```
 $> docker run -it -p 4242:4242 -p 80:80 --name [container name] [docker image]
 ```
--it : Rend le conteneur interactif depuis le terminal.  
--p : Exposer le port 4242 et 80, dans ce cas, à partir du conteneur en tant que port 4242 et 80, n'importe quel autre port fera l'affaire. 
---name : Le nom du conteneur. 
+-it : Rend le conteneur interactif depuis le terminal.
+-p : Exposer le port 4242 et 80, dans ce cas, à partir du conteneur en tant que port 4242 et 80, n'importe quel autre port fera l'affaire.
+--name : Le nom du conteneur.
 image : dans ce cas j'ai choisi debian (installation avec ```docker pull debian```)
 
 Pour sortir de ce processus, nous exécutons :
@@ -31,7 +31,7 @@ $> docker start -i [nom du conteneur].
 
 ## Installation des paquets 
 
-Les paquets les plus importants pour ce serveur sont nginx, Openssh-server et tor, 
+Les paquets les plus importants pour ce serveur sont nginx, Openssh-server et tor.
 Pour les installer, il faut utiliser apt comme suit :
 
 Pour Openssh-server 
