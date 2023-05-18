@@ -1,26 +1,44 @@
-
-undefined8 main(void)
+void ___syscall_malloc(void)
 
 {
-  ulong uVar1;
+  puts("Nope.");
+                    // WARNING: Subroutine does not return
+  exit(1);
+}
+
+
+
+void ____syscall_malloc(void)
+
+{
+  puts("Good job.");
+  return;
+}
+
+
+
+int main(void)
+
+{
+  long uVar1;
   int iVar2;
   size_t sVar3;
   bool bVar4;
   char local_4c;
   char local_4b;
   char local_4a;
-  undefined local_49;
+  int local_49;
   char local_48 [31];
   char local_29 [9];
-  ulong local_20;
+  int local_20;
   int local_18;
   int local_14;
   int local_10;
-  undefined4 local_c;
+  int local_c;
   
   local_c = 0;
   printf("Please enter key: ");
-  local_10 = __isoc99_scanf(&DAT_00102056);
+  local_10 = scanf(&DAT_00102056);
   if (local_10 != 1) {
     ___syscall_malloc();
   }
@@ -30,7 +48,7 @@ undefined8 main(void)
   if (local_48[0] != '4') {
     ___syscall_malloc();
   }
-  fflush(_stdin);
+  fflush(stdin);
   memset(local_29,0,9);
   local_29[0] = '*';
   local_49 = 0;

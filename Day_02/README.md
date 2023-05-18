@@ -144,12 +144,10 @@ $> tor
 ```
 Depuis un terminal en ssh : 
 ```
-$> docker exec -ti [ID du container] sh
+$> sudo su (il nous demandera le mot de passe de l'utilisateur) 
 $> cd /var/lib/tor/hidden_service/ 
 $> cat hostname 
 ```
-L'ID du container se trouve avec la commande ```docker ps```.
-
 Cela nous donnera un hash avec un .onion à la fin [xxxxxx...xxx.onion] et ce sera notre lien de connexion dans tor ou Brave tor. 
 
 Notre serveur est alors terminé.

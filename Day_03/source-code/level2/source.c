@@ -1,45 +1,79 @@
-#include <stdio.h>
-#include <stdbool.h>
-#include <string.h>
-#include <stdlib.h>
 
-void printNope(void) {
-    printf("Nope.\n");
-    exit(1);
+void no(void)
+
+{
+  puts("Nope.");
+                    /* WARNING: Subroutine does not return */
+  exit(1);
 }
 
-void printGoodJob(void) {
-    printf("Good job.\n");
-    return;
+void ok(void)
+
+{
+  puts("Good job.");
+  return;
 }
 
-int main(void) {
-    char input[24];
-    char key[9];
-    int scanResult;
+undefined4 main(void)
 
-    printf("Please enter key: ");
-    scanResult = scanf("%s", input);
-    if (scanResult != 1) {
-        printNope();
+{
+  uint uVar1;
+  size_t sVar2;
+  int iVar3;
+  bool bVar4;
+  char local_3d;
+  char local_3c;
+  char local_3b;
+  undefined local_3a;
+  char local_39 [24];
+  char local_21 [9];
+  uint local_18;
+  int local_14;
+  int local_10;
+  undefined4 local_c;
+  
+  local_c = 0;
+  printf("Please enter key: ");
+  local_10 = __isoc99_scanf(&DAT_00012d2e,local_39);
+  if (local_10 != 1) {
+    no();
+  }
+  if (local_39[1] != '0') {
+    no();
+  }
+  if (local_39[0] != '0') {
+    no();
+  }
+  fflush(_stdin);
+  memset(local_21,0,9);
+  local_21[0] = 'd';
+  local_3a = 0;
+  local_18 = 2;
+  local_14 = 1;
+  while( true ) {
+    sVar2 = strlen(local_21);
+    uVar1 = local_18;
+    bVar4 = false;
+    if (sVar2 < 8) {
+      sVar2 = strlen(local_39);
+      bVar4 = uVar1 < sVar2;
     }
-    if (input[0] != '0' || input[1] != '0') {
-        printNope();
-    }
-    memset(key, 0, 9);
-    key[0] = 'd';
-    unsigned int keyIndex = 2;
-    unsigned int keyPosition = 1;
-    while (strlen(key) < 8 && keyIndex < strlen(input)) {
-        key[keyPosition] = input[keyIndex];
-        keyIndex += 3;
-        keyPosition++;
-    }
-    key[keyPosition] = '\0';
-    if (strcmp(key, "delabere") == 0) {
-        printGoodJob();
-    } else {
-        printNope();
-    }
-    return 0;
+    if (!bVar4) break;
+    local_3d = local_39[local_18];
+    local_3c = local_39[local_18 + 1];
+    local_3b = local_39[local_18 + 2];
+    iVar3 = atoi(&local_3d);
+    local_21[local_14] = (char)iVar3;
+    local_18 = local_18 + 3;
+    local_14 = local_14 + 1;
+  }
+  local_21[local_14] = '\0';
+  iVar3 = strcmp(local_21,"delabere");
+  if (iVar3 == 0) {
+    ok();
+  }
+  else {
+    no();
+  }
+  return 0;
 }
