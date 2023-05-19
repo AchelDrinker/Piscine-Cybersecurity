@@ -1,0 +1,28 @@
+services:
+  attacker:
+    build: .
+    container_name: attacker
+    networks:
+      - inq-network
+    volumes:
+      - $PWD/code:/code
+  client:
+    build: ./client/
+    container_name: client
+    networks:
+      - inq-network
+  server:
+    build: ./server/
+    container_name: server
+    networks:
+      - inq-network
+    environment:
+      FTP_USR: ${FTP_USR}
+      FTP_PWD: ${FTP_PWD}
+    expose:
+      - "21"
+      - "10000-10009"
+
+networks:
+  inq-network:
+    driver: bridge
