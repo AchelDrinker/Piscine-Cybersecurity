@@ -33,7 +33,7 @@ $> exit
 ```
 Pour le redémarrer on exécute dans le terminal : 
 ```
-$> docker start -i [nom du conteneur] 
+$> docker start -i [nom du conteneur]. 
 ```
 
 ## Installation des paquets 
