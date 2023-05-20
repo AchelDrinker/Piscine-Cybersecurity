@@ -147,7 +147,7 @@ Depuis un terminal pour se connecter en ssh :
 ```
 $> docker exec -it CONTAINER_ID sh
 ```
-Pour avoir le CONTAINER_ID, utilisez la commande ```docker ps``` et cherchez le container que vous avez défini.
+Pour avoir le CONTAINER_ID, utilisez la commande ```docker ps``` et cherchez le container que vous avez créé.
 
 En ssh : 
 ```
