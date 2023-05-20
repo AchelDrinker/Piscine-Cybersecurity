@@ -155,6 +155,6 @@ $> sudo su (il nous demandera le mot de passe de l'utilisateur)
 $> cd /var/lib/tor/hidden_service/ 
 $> cat hostname 
 ```
-Cela nous donnera un hash avec un .onion à la fin [xxxxxx...xxx.onion] et ce sera notre lien de connexion dans tor ou Brave tor. 
+Cela nous donnera un hash avec un .onion à la fin [xxxxxx...xxx.onion], ce sera notre lien de connexion dans tor ou Brave tor.
 
 Notre serveur est alors terminé.
