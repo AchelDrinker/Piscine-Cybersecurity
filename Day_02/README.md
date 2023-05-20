@@ -142,7 +142,14 @@ Pour démarrer tor, il faut taper
 ```
 $> tor  
 ```
-Depuis un terminal en ssh : 
+
+Depuis un terminal pour se connecter en ssh :
+```
+$> docker exec -it CONTAINER_ID sh
+```
+Pour avoir le CONTAINER_ID, utilisez la commande ```docker ps``` et cherchez le container que vous avez défini.
+
+En ssh : 
 ```
 $> sudo su (il nous demandera le mot de passe de l'utilisateur) 
 $> cd /var/lib/tor/hidden_service/ 
